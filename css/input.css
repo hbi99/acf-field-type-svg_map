@@ -1,0 +1,101 @@
+.svgp-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+.svgp-container:after {
+  display: none;
+  content: '';
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-shadow: inset 0px 0px 13px rgba(0, 0, 0, 0.5);
+}
+.svgp-container .svgp-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.svgp-container .svgm-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 31px;
+  background-color: #f00;
+  margin: -15px 0px 0px -1px;
+  box-shadow: 0px 0px 3px #fff,
+					0px 0px 1px #fff;
+}
+.svgp-container .svgm-cross:after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: -15px;
+  width: 31px;
+  height: 2px;
+  background-color: inherit;
+  box-shadow: 0px 0px 3px #fff,
+						0px 0px 1px #fff;
+}
+.svgp-container .button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding-right: 18px;
+  padding-left: 5px;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.5);
+}
+.svgp-container .button.checked {
+  top: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.svgp-container .button.checked .svgp-icon_check {
+  border-color: #777;
+}
+.svgp-container .svgp-icon_check {
+  position: relative;
+  top: -3px;
+  left: 0px;
+  display: inline-block;
+  width: 10px;
+  height: 4px;
+  border-left: 3px solid;
+  border-bottom: 3px solid;
+  border-color: transparent;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.svgp-container:not(.focus-mode) polygon:hover {
+  opacity: 1;
+}
+.svgp-container polygon {
+  stroke: #00f;
+  stroke-width: 1px;
+  stroke-miterlimit: 2;
+  fill: rgba(100, 100, 255, 0.35);
+  opacity: 0;
+  cursor: pointer;
+}
+.svgp-container polygon.svgp_active {
+  stroke: #00f;
+  fill: rgba(0, 0, 255, 0.5);
+  opacity: 1;
+}
+.svgp-container polygon.svgp_marked {
+  stroke: #f77;
+  fill: rgba(255, 100, 100, 0.5);
+  opacity: 1;
+  cursor: default;
+}
+/*
+ * Mixins
+ */
